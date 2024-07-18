@@ -9,6 +9,21 @@ API_KEY = os.getenv('TMDB_API_KEY')
 BASE_URL = 'https://api.themoviedb.org/3'
 
 def fetch_all_pages(api_key, base_url, endpoint):
+    """
+    Fetches all pages of data from an API endpoint.
+
+    Args:
+        api_key (str): The API key to authenticate the request.
+        base_url (str): The base URL of the API.
+        endpoint (str): The specific endpoint to fetch data from.
+
+    Returns:
+        list: A list of all the fetched data from all pages.
+
+    Raises:
+        None
+
+    """
     all_data = []
     page = 1
     while True:
@@ -28,6 +43,19 @@ def fetch_all_pages(api_key, base_url, endpoint):
     return all_data
 
 def fetch_details(api_key, base_url, endpoint, item_id):
+    """
+    Fetches details for a specific item using the provided API key, base URL, endpoint, and item ID.
+
+    Args:
+        api_key (str): The API key for authentication.
+        base_url (str): The base URL of the API.
+        endpoint (str): The endpoint for the specific item.
+        item_id (str): The ID of the item to fetch details for.
+
+    Returns:
+        dict: A dictionary containing the details of the item.
+
+    """
     url = f"{base_url}/{endpoint}/{item_id}"
     params = {'api_key': api_key, 'language': 'en-US'}
     response = requests.get(url, params=params)
@@ -38,6 +66,18 @@ def fetch_details(api_key, base_url, endpoint, item_id):
         return {}
 
 def collect_detailed_data(api_key, base_url, items, endpoint):
+    """
+    Collects detailed data for a list of items.
+
+    Parameters:
+    - api_key (str): The API key for authentication.
+    - base_url (str): The base URL of the API.
+    - items (list): A list of items.
+    - endpoint (str): The endpoint for fetching item details.
+
+    Returns:
+    - detailed_data (list): A list of detailed data for each item.
+    """
     detailed_data = []
     for item in items:
         item_id = item['id']
