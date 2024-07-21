@@ -44,5 +44,16 @@ def main():
         else:
             st.error("Please enter the name of the movie or TV series.")
 
+    st.markdown(
+        """
+        <div class="footer">
+            <p><strong>Disclaimer:</strong> The information provided on this website is for informational purposes only and is not intended as financial advice. Always do your own research before making any investment decisions.</p>
+            <p>Developed By Zeeshan Hameed</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    
 if __name__ == "__main__":
     main()
