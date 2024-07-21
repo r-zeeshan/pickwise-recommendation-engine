@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from model import RecommendationEngine
 
 # Initialize the recommendation engine with caching
