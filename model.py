@@ -24,8 +24,9 @@ class RecommendationEngine:
         Returns:
             tuple: TF-IDF matrices for movies and TV series.
         """
-        self.movies_data['overview'].fillna('', inplace=True)
-        self.tv_data['overview'].fillna('', inplace=True)
+        # Fill missing values for the 'overview' column
+        self.movies_data['overview'] = self.movies_data['overview'].fillna('')
+        self.tv_data['overview'] = self.tv_data['overview'].fillna('')
 
         # Fit and transform the overview column for movies
         tfidf_matrix_movies = self.tfidf_vectorizer.fit_transform(self.movies_data['overview'])
