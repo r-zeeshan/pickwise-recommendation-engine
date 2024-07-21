@@ -1,9 +1,13 @@
 import streamlit as st
 import pandas as pd
-from model import RecommendationEngine
+from recommendation_engine import RecommendationEngine
 
-# Initialize the recommendation engine
-engine = RecommendationEngine()
+# Initialize the recommendation engine with caching
+@st.cache(allow_output_mutation=True)
+def load_engine():
+    return RecommendationEngine()
+
+engine = load_engine()
 
 # Streamlit application
 st.title("Movie and TV Series Recommendation Engine")
