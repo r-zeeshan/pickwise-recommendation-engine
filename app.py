@@ -26,7 +26,7 @@ def main():
     option = st.selectbox("Is it a movie or a TV series?", ("Movie", "TV Series"))
 
     # User input for number of recommendations
-    top_n = st.number_input("How many recommendations do you want?", min_value=1, max_value=20, value=10)
+    top_n = st.number_input("How many recommendations do you want?", min_value=1, max_value=20, value=3)
 
     if st.button("Get Recommendations"):
         if title:
