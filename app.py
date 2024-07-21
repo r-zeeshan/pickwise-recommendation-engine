@@ -1,6 +1,5 @@
 import streamlit as st
-import pandas as pd
-from recommendation_engine import RecommendationEngine
+from model import RecommendationEngine
 
 # Initialize the recommendation engine with caching
 @st.cache(allow_output_mutation=True)
