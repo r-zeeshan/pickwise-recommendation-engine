@@ -2,7 +2,7 @@ import streamlit as st
 from model import RecommendationEngine
 
 # Initialize the recommendation engine with caching
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_engine():
     return RecommendationEngine()
 
