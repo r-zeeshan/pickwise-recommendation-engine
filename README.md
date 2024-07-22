@@ -1,4 +1,4 @@
-# Movie and TV Series Recommendation Engine
+# Pickwise Recommendation Engine
 
 This project is a content-based recommendation engine for movies and TV series, built using Python and Streamlit. The engine leverages TF-IDF vectorization and cosine similarity to recommend similar movies or TV series based on the input title provided by the user.  
 
