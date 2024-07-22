@@ -1,4 +1,3 @@
-# fetch_series_data.py
 import pandas as pd
 from data_utils import fetch_all_pages, collect_detailed_data, API_KEY, BASE_URL
 
