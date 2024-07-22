@@ -17,7 +17,7 @@ def main():
     """
     Main function to run the Streamlit application for the recommendation engine.
     """
-    st.title("Movie and TV Series Recommendation Engine")
+    st.title("Pickwise Recommendation Engine")
 
     title = st.text_input("Enter the name of the movie or TV series you watched:")
 
