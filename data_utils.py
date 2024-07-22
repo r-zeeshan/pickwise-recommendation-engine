@@ -1,9 +1,7 @@
-# data_utils.py
 import requests
 import os
 from dotenv import load_dotenv
 
-# Load API key from .env file
 load_dotenv()
 API_KEY = os.getenv('TMDB_API_KEY')
 BASE_URL = 'https://api.themoviedb.org/3'
